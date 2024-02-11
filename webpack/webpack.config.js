@@ -16,6 +16,18 @@ module.exports = {
 						loader: require.resolve('babel-loader'),
 					}
 				]
+			},
+			{
+				test: /\.css$/,
+				use: ['style-loader', 'css-loader']
+			},
+			{
+				test: /\.(?:ico|gif|jpg|png|jpeg)$/i,
+				type: 'asset/resource',
+			},
+			{
+				test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+				type: 'asset/inline'
 			}
 		]
     },
